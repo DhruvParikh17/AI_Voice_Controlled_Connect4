@@ -4,7 +4,7 @@ import random
 class AIPlayer:
 
     def __init__(self, name, piece):
-
+        # Initializes the name to the AI and its assigned pieces.
         self.name = name
         self.piece = piece
 

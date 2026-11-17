@@ -1,14 +1,14 @@
 class Board:
-
+    #defining the board.
     ROWS = 6
     COLS = 7
 
     def __init__(self):
-        self.grid = []#creates a empty grid.
+        self.grid = []#creates an empty grid.
 
         for row in range(self.ROWS):
             self.grid.append(
-                [" "] * self.COLS #Creates a row.
+                [" "] * self.COLS # creates a row.
             )
 
 
@@ -16,15 +16,15 @@ class Board:
 
         print()
 
-        for row in self.grid: #printing the rows.
-            print("|", end="") #printing the vertical bars.
+        for row in self.grid: # go through each row.
+            print("|", end="") #printing the left side of the board.
 
-            for cell in row: #printing each cell
-                print(cell + "|", end="")
+            for cell in row: # go through each cell.
+                print(cell + "|", end="") #Print cell value and a vertical separtor.
 
             print()
 
-        print(" 1 2 3 4 5 6 7")
+        print(" 1 2 3 4 5 6 7") #column numbers.
         print()
 
 
@@ -35,7 +35,7 @@ class Board:
 
             if self.grid[row][column] == " ": #finding empty spot.
 
-                self.grid[row][column] = piece
+                self.grid[row][column] = piece #Place piece into slot.
                 return True
 
 
@@ -47,7 +47,7 @@ class Board:
         moves = []
 
         for col in range(self.COLS):
-
+            #if the top row is empty, the column can accept a piece
             if self.grid[0][col] == " ":
                 moves.append(col)
 
@@ -79,7 +79,7 @@ class Board:
                 ):
                     return True
 
-        # Diagonal down-right \
+        # Diagonal down-right
         for row in range(self.ROWS - 3):
             for col in range(self.COLS - 3):
 
@@ -91,7 +91,7 @@ class Board:
                 ):
                     return True
 
-        # Diagonal up-right /
+        # Diagonal up-right
         for row in range(3, self.ROWS):
             for col in range(self.COLS - 3):
 
@@ -106,7 +106,7 @@ class Board:
         return False
 
     def copy(self):
-
+        # Copies the current board in real time
         new_board = Board()
 
         for row in range(self.ROWS):
