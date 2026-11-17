@@ -1,10 +1,8 @@
 AI Voice Controlled Connect 4
 
-A Python text-based game board that features:
+A desktop Connect 4 game built with Python and Tkinter that lets you play completely hands free using your microphone and speech recognition, powered by a custom AI opponent.
 
-- Voice-controlled moves using SpeechRecognition
-- AI opponent
-- Object-oriented design
+View Live Web Version Here: https://dhruvparikhaicontrolledconenct4.netlify.app 
 
 Software used to make this game happen:
 
@@ -12,9 +10,4 @@ Software used to make this game happen:
 - sounddevice
 - SpeechRecognition
 - NumPy
-
-
-Things needed to run the game:
-
-- pip install sounddevice SpeechRecognition numpy
-- Python main.py
+- Tkinter
